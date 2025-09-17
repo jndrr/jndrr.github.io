@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .skill-icon {
+            transition: all 0.3s ease;
+        }
+        .skill-icon:hover {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+        .rounded-image{
+            border-radius: 15px;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(45deg, #374151, #4b5563);
+            border: 2px dashed #6b7280;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-blue-400">IT Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-blue-400">About</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-blue-400">Skills</a>
+                    <a href="#experience" class="nav-link text-slate-300 hover:text-blue-400">Experience</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-blue-400">Contact</a>
+                </div>
+                <button class="md:hidden text-slate-300" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-slate-700 pt-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-blue-400">About</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-blue-400">Skills</a>
+                    <a href="#experience" class="nav-link text-slate-300 hover:text-blue-400">Experience</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-blue-400">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Jhonny Ocariz
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                IT Professional | Instructor | Developer | UI/UX Designer | Technical Support Specialist
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#about" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+                    View My Work
+                </a>
+                <a href="#contact" class="border border-slate-600 hover:border-blue-400 px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold mb-6 text-white">Jhonny Ocariz - IT Professional</h3>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        A keen observer and fast learner with a diverse IT background spanning instruction, development, design, and technical support. Currently serving as an IT Instructor at Cavite State University while maintaining an active freelance practice since 2017.
+                    </p>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        My experience includes roles as a .NET Application Developer, Service Desk Analyst at EY, UI/UX Designer, and Freelance Technician. I excel at adapting to new technologies and providing user-focused solutions with efficient technical support across hardware, software, and network environments.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm">IT Instruction</span>
+                        <span class="bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-sm">.NET Development</span>
+                        <span class="bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm">UI/UX Design</span>
+                        <span class="bg-orange-600/20 text-orange-400 px-4 py-2 rounded-full text-sm">Technical Support</span>
+                        <span class="bg-cyan-600/20 text-cyan-400 px-4 py-2 rounded-full text-sm">Freelance Services</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    
+                        
+                            
+                    
+                            <img class="rounded-image" src=./Assets/jang.png width="70%">
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section id="skills" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Skills & Expertise</h2>
+            
+            <!-- Programming Languages -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-white">Programming Languages & Frameworks</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="text-center">
+                        <i class="fab fa-microsoft text-5xl skill-icon text-blue-400 mb-4"></i>
+                        <p class="text-slate-300">.NET / C#</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-java text-5xl skill-icon text-red-400 mb-4"></i>
+                        <p class="text-slate-300">Java</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-code text-5xl skill-icon text-cyan-400 mb-4"></i>
+                        <p class="text-slate-300">C/C++</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-js-square text-5xl skill-icon text-yellow-400 mb-4"></i>
+                        <p class="text-slate-300">JavaScript</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-php text-5xl skill-icon text-purple-400 mb-4"></i>
+                        <p class="text-slate-300">PHP</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-database text-5xl skill-icon text-orange-400 mb-4"></i>
+                        <p class="text-slate-300">SQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platforms & Development Tools -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-white">Platforms & Development Tools</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="text-center">
+                        <i class="fab fa-microsoft text-5xl skill-icon text-blue-400 mb-4"></i>
+                        <p class="text-slate-300">Visual Studio</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-android text-5xl skill-icon text-green-400 mb-4"></i>
+                        <p class="text-slate-300">Android Studio</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-mobile-alt text-5xl skill-icon text-purple-400 mb-4"></i>
+                        <p class="text-slate-300">Xamarin Forms</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-cloud text-5xl skill-icon text-cyan-400 mb-4"></i>
+                        <p class="text-slate-300">Salesforce</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-code text-5xl skill-icon text-orange-400 mb-4"></i>
+                        <p class="text-slate-300">MVC</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-html5 text-5xl skill-icon text-red-400 mb-4"></i>
+                        <p class="text-slate-300">HTML/CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardware & Technical Support -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-white">Hardware & Technical Support</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="text-center">
+                        <i class="fas fa-microchip text-5xl skill-icon text-orange-400 mb-4"></i>
+                        <p class="text-slate-300">Arduino</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-raspberry-pi text-5xl skill-icon text-red-400 mb-4"></i>
+                        <p class="text-slate-300">Raspberry Pi</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-industry text-5xl skill-icon text-blue-400 mb-4"></i>
+                        <p class="text-slate-300">PLC</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-laptop text-5xl skill-icon text-green-400 mb-4"></i>
+                        <p class="text-slate-300">Hardware Repair</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-print text-5xl skill-icon text-purple-400 mb-4"></i>
+                        <p class="text-slate-300">Printer Support</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-mobile-alt text-5xl skill-icon text-cyan-400 mb-4"></i>
+                        <p class="text-slate-300">Mobile Devices</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remote Tools & Administration -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-white">Remote Tools & Administration</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="text-center">
+                        <i class="fas fa-desktop text-5xl skill-icon text-blue-400 mb-4"></i>
+                        <p class="text-slate-300">TeamViewer</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-remote-desktop text-5xl skill-icon text-green-400 mb-4"></i>
+                        <p class="text-slate-300">AnyDesk</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fab fa-chrome text-5xl skill-icon text-yellow-400 mb-4"></i>
+                        <p class="text-slate-300">Chrome Remote</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-users-cog text-5xl skill-icon text-purple-400 mb-4"></i>
+                        <p class="text-slate-300">Active Directory</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-ticket-alt text-5xl skill-icon text-orange-400 mb-4"></i>
+                        <p class="text-slate-300">ServiceNow</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-5xl skill-icon text-red-400 mb-4"></i>
+                        <p class="text-slate-300">MBAM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI/UX Design Tools -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-white">UI/UX Design Tools</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="text-center">
+                        <i class="fab fa-adobe text-5xl skill-icon text-blue-400 mb-4"></i>
+                        <p class="text-slate-300">Adobe Photoshop</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-palette text-5xl skill-icon text-purple-400 mb-4"></i>
+                        <p class="text-slate-300">Canva</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-image text-5xl skill-icon text-orange-400 mb-4"></i>
+                        <p class="text-slate-300">GIMP</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-pencil-ruler text-5xl skill-icon text-green-400 mb-4"></i>
+                        <p class="text-slate-300">UI Design</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-user-friends text-5xl skill-icon text-cyan-400 mb-4"></i>
+                        <p class="text-slate-300">UX Research</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-mobile-alt text-5xl skill-icon text-red-400 mb-4"></i>
+                        <p class="text-slate-300">Mobile Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Work Experience</h2>
+            <div class="space-y-8">
+                
+                <!-- IT Instructor -->
+                <div class="bg-slate-800 rounded-xl p-8 border border-slate-700">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-2">IT Instructor I</h3>
+                            <p class="text-blue-400 text-lg">Cavite State University - Trece Martires City Campus</p>
+                        </div>
+                        <div class="text-slate-300 mt-2 md:mt-0">
+                            <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm">September 2023 - February 2025</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        Stayed current with IT trends, performed regular hardware and software updates on classroom devices, and monitored student progress through assignments, quizzes, and tests.
+                    </p>
+                </div>
+
+                <!-- Freelance Technician -->
+                <div class="bg-slate-800 rounded-xl p-8 border border-slate-700">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-2">Freelance Technician</h3>
+                            <p class="text-green-400 text-lg">Independent Practice</p>
+                        </div>
+                        <div class="text-slate-300 mt-2 md:mt-0">
+                            <span class="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-sm">2017 - Present</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        Troubleshoots laptops, desktops, printers, and mobile phones to find and resolve hardware and software issues.
+                    </p>
+                </div>
+
+                <!-- Service Desk Analyst -->
+                <div class="bg-slate-800 rounded-xl p-8 border border-slate-700">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-2">Service Desk Analyst/Engineer Level 1 - EY</h3>
+                            <p class="text-purple-400 text-lg">Syntel Infotech | Atos Syntel</p>
+                        </div>
+                        <div class="text-slate-300 mt-2 md:mt-0">
+                            <span class="bg-purple-600/20 text-purple-400 px-3 py-1 rounded-full text-sm">October 2022 - May 2023</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        Troubleshooted hardware, software, and network problems via phone, identified and resolved end-user problems, and provided technical guidance to less experienced staff.
+                    </p>
+                </div>
+
+                <!-- Application Developer -->
+                <div class="bg-slate-800 rounded-xl p-8 border border-slate-700">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-2">Application Developer (.NET Developer)</h3>
+                            <p class="text-orange-400 text-lg">Syntel Infotech | Atos Syntel</p>
+                        </div>
+                        <div class="text-slate-300 mt-2 md:mt-0">
+                            <span class="bg-orange-600/20 text-orange-400 px-3 py-1 rounded-full text-sm">March 2022 - October 2022</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        Aided and supported other development teams in building and maintaining .NET applications.
+                    </p>
+                </div>
+
+                <!-- Associate Consultant -->
+                <div class="bg-slate-800 rounded-xl p-8 border border-slate-700">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-2">Associate Consultant</h3>
+                            <p class="text-cyan-400 text-lg">Syntel Infotech | Atos Syntel</p>
+                        </div>
+                        <div class="text-slate-300 mt-2 md:mt-0">
+                            <span class="bg-cyan-600/20 text-cyan-400 px-3 py-1 rounded-full text-sm">January 2022 - March 2022</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        Completed company-provided trainings and learned basic knowledge in different programming languages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Education</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- BS Information Technology -->
+                <div class="bg-slate-900 rounded-xl p-8 border border-slate-700">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-graduation-cap text-4xl text-blue-400 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Bachelor of Science in Information Technology</h3>
+                            <p class="text-blue-400">Cavite State University - Trece Martires City Campus</p>
+                        </div>
+                    </div>
+                    <div class="text-slate-300">
+                        <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm">2017 - 2020</span>
+                    </div>
+                </div>
+
+                <!-- BS Electronics and Communication Engineering -->
+                <div class="bg-slate-900 rounded-xl p-8 border border-slate-700">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-microchip text-4xl text-orange-400 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Bachelor of Science in Electronics and Communication Engineering</h3>
+                            <p class="text-orange-400">Polytechnic University of the Philippines - Maragondon Branch</p>
+                        </div>
+                    </div>
+                    <div class="text-slate-300">
+                        <span class="bg-orange-600/20 text-orange-400 px-3 py-1 rounded-full text-sm">2013 - 2017</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-blue-400">Let's Connect</h2>
+            <p class="text-xl text-slate-300 mb-12">
+                Ready to discuss your next project or explore collaboration opportunities?
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <i class="fas fa-envelope text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Gmail</h3>
+                   
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ocariz.jhonny.depalubos@gmail.com&su=Hello&body=Your%20message%20here.">Message</a>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <i class="fab fa-linkedin text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2 text-white">LinkedIn</h3>
+                    <p class="intro-text"><a href="www.linkedin.com/in/jangocariz" target="_blank" rel="noopener noreferrer">Connect Now!</a></p>
+
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <i class="fab fa-github text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2 text-white">GitHub</h3>
+                   
+                    <p class="intro-text"><a href="https://github.com/jndrr" target="_blank" rel="noopener noreferrer">Check</a></p>
+                </div>
+            </div>
+             <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <i class="fa-brands fa-viber text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Viber</h3>
+                   
+                     <a href="viber://chat?number=639272880592" class="viber-button">Message Me</a>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <i class="fa-brands fa-telegram text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Telegram</h3>
+                    <p class="intro-text"><a href="https://t.me/drkzne?text=Hi%20there%21%20I%20have%20a%20question%20about%20your%20services.">Send us a message</a></p>
+
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <i class="fa-brands fa-whatsapp text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Whatsapp</h3>
+                   
+                    <p class="intro-text"><a href="https://wa.me/639272880592" class="whatsapp-button">Chat with us</a></p>
+                </div>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+               <a href="https://drive.google.com/uc?export=download&id=1JDyC2Ax48nwFvA8gWgglIJxs-IesjxZe" class="download-button" download>Download Resume</a>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-slate-400">
+                © 2024 Jhonny Ocariz. Built with passion for technology and innovation.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-slate-900');
+            } else {
+                nav.classList.remove('bg-slate-900');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9806fb548762fee8',t:'MTc1ODA5NTEwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
